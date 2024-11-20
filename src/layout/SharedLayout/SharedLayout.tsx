@@ -1,7 +1,12 @@
-const SharedLayout = () => {
+import * as SC from "./SharedLayoutStyled"
+
+import Content from "../../components/Content/Content";
+
+const SharedLayout:React.FC = () => {
     return ( 
-        <div>
-        </div>
+        <SC.SharedLayoutCustom>
+            <Content/>
+        </SC.SharedLayoutCustom>
      );
 }
  
