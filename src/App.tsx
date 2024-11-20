@@ -1,13 +1,13 @@
-import './App.css';
+import * as SC from "./AppStyled"
 import Header from './layout/Header/Header';
 import SharedLayout from './layout/SharedLayout/SharedLayout';
 
 function App() {
   return (
-    <div className="App">
+    <SC.AppCustom className="App">
       <Header/>
       <SharedLayout/>
-    </div>
+    </SC.AppCustom>
   );
 }
 

@@ -1,10 +1,12 @@
+import * as SC from "./HeaderStyled"
+
 import Logo from "../../components/Logo/Logo";
 
-const Header = () => {
+const Header:React.FC = () => {
     return ( 
-    <header>
+    <SC.HeaderCustom>
         <Logo/>
-    </header>
+    </SC.HeaderCustom>
  );
 }
  
