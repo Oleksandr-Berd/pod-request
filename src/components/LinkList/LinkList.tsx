@@ -5,32 +5,35 @@ import { ReactComponent as GooglePicMob } from "../../assets/images/mobile/googl
 import { ReactComponent as SpotifyPicMob } from "../../assets/images/mobile/spotify.svg";
 import { ReactComponent as PocketPicMob } from "../../assets/images/mobile/pocket.svg";
 
-// import {ReactComponent as ApplePic} from "../../assets/images/desktop/apple-podcast.svg"
-// import { ReactComponent as GooglePic } from "../../assets/images/desktop/google-podcasts.svg";
-// import { ReactComponent as SpotifyPic } from "../../assets/images/desktop/spotify.svg";
-// import { ReactComponent as PocketPic } from "../../assets/images/desktop/pocket-casts.svg";
+import {ReactComponent as ApplePic} from "../../assets/images/tablet/appleTab.svg"
+import { ReactComponent as GooglePic } from "../../assets/images/tablet/googleTab.svg";
+import { ReactComponent as SpotifyPic } from "../../assets/images/tablet/Spotify_logo_with_text 2.svg";
+import { ReactComponent as PocketPic } from "../../assets/images/tablet/pocket-casts.svg";
+import { useScreenSize } from "../../utils/hooks/useScreenSize";
 
 const LinkList:React.FC = () => {
+const {isTablet} = useScreenSize()
+
     return (
       <SC.LinkListCustom>
         <SC.Link>
           <a href="https://portfolio-aleks-berd.netlify.app">
-            <SpotifyPicMob />
+            {isTablet ? <SpotifyPic /> : <SpotifyPicMob />}
           </a>
         </SC.Link>
         <SC.Link>
           <a href="https://portfolio-aleks-berd.netlify.app">
-            <ApplePicMob />
+            {isTablet ? <ApplePic /> : <ApplePicMob />}
           </a>
         </SC.Link>
         <SC.Link>
           <a href="https://portfolio-aleks-berd.netlify.app">
-            <GooglePicMob />
+            {isTablet ? <GooglePic /> : <GooglePicMob />}
           </a>
         </SC.Link>
         <SC.Link>
           <a href="https://portfolio-aleks-berd.netlify.app">
-            <PocketPicMob />
+            {isTablet ? <PocketPic /> : <PocketPicMob />}
           </a>
         </SC.Link>
       </SC.LinkListCustom>
