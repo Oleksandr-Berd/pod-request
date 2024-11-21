@@ -5,6 +5,14 @@ export const ContentCon = styled.div`
 
   text-align: center;
 
+  @media (min-width: 768px) {
+    width: 635px;
+
+    margin-bottom: 40px;
+
+    text-align: left;
+  }
+
   & > h3 {
     margin-bottom: 16px;
 
@@ -18,11 +26,25 @@ export const ContentCon = styled.div`
     & > span {
       color: #54e6af;
     }
+
+    @media (min-width: 768px) {
+      margin-bottom: 32px;
+
+      font-size: 48px;
+      line-height: 1.67;
+    }
   }
 
   & > p {
     font-size: 15px;
     line-height: 1.67;
     color: #c2cbe5;
+
+    @media (min-width: 768px) {
+      width: 445px;
+
+      font-size: 18px;
+      line-height: 1.56;
+    }
   }
 `;

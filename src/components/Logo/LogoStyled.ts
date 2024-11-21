@@ -9,4 +9,10 @@ justify-content: center;
 &:first-child{
     margin-right: 13px;
 }
+
+@media (min-width: 768px){
+    justify-content: start;
+
+    
+}
 `
