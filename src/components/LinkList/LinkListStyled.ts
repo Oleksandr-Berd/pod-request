@@ -4,7 +4,9 @@ export const LinkListCustom = styled.ul`
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: c;
+justify-content: center;
+
+margin-bottom: 48px;
 `
 
 export const Link = styled.li`
