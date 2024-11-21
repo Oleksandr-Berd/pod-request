@@ -1,24 +1,45 @@
-import { Formik } from "formik";
-import { validSchema } from '../../utils/validation';
+import { ErrorMessage, Field, Form, Formik } from "formik";
 
-const RequestForm:React.FC = () => {
-    return ( 
+import * as SC from "./RequestFormStyled";
+
+import { validSchema } from "../../utils/validation";
+import { IProps } from "../../utils/interfaces";
+
+const RequestForm: React.FC<IProps> = ({ handleSubmit }) => {
+  return (
     <div>
-<Formik 
-initialValues={{email:""}}
-validationSchema={validSchema}
-onSubmit={(values, {setSubmitting, resetForm})=> {
-        console.log(values);
+      <Formik
+        initialValues={{ email: "" }}
+        validationSchema={validSchema}
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          console.log(values);
+          handleSubmit(values);
+          resetForm();
+          setSubmitting(false);
+        }}
+      >
+        {({ isSubmitting, touched, errors }) => (
+          <Form noValidate>
+            <SC.RequestFormCustom>
+              <Field
+                type="email"
+                name="email"
+                placeholder="Email address"
+                style={{
+                  borderColor:
+                    touched.email && errors.email ? "#FF5466" : "#C2D3FF",
+                }}
+              />
+              <ErrorMessage name="email">
+                {(msg) => (msg ? <p>{msg}</p> : null)}
+              </ErrorMessage>
+            </SC.RequestFormCustom>
+            <SC.SubmitButton type="submit">Request Access</SC.SubmitButton>
+          </Form>
+        )}
+      </Formik>
+    </div>
+  );
+};
 
-        resetForm();
-        setSubmitting(false);
-      }}
->
-
-
-</Formik>
-    </div> 
-);
-}
- 
 export default RequestForm;
