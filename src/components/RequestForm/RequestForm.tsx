@@ -7,7 +7,7 @@ import { IProps } from "../../utils/interfaces";
 
 const RequestForm: React.FC<IProps> = ({ handleSubmit }) => {
   return (
-    <div>
+    <SC.FormContent>
       <Formik
         initialValues={{ email: "" }}
         validationSchema={validSchema}
@@ -38,7 +38,7 @@ const RequestForm: React.FC<IProps> = ({ handleSubmit }) => {
           </Form>
         )}
       </Formik>
-    </div>
+    </SC.FormContent>
   );
 };
 
