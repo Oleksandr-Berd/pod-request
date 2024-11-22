@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 import backImage from "./assets/images/mobile/image-host.jpg";
-import backImageTab from "./assets/images/tablet/image-host.jpg"
+import backImageTab from "./assets/images/tablet/image-host.jpg";
+import backImageDesk from "./assets/images/desktop/image-host.jpg";
 
 export const AppCustom = styled.div`
   height: 100vh;
@@ -9,7 +10,6 @@ export const AppCustom = styled.div`
   background-color: rgba(18, 23, 37, 0.7);
   position: relative;
 
- 
   &::before {
     content: "";
     position: absolute;
@@ -28,6 +28,16 @@ export const AppCustom = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: top right;
+      backdrop-filter: blur(10px);
+      z-index: -1;
+    }
+
+    @media (min-width: 1280px) {
+
+      background-image: url(${backImageDesk});
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center right;
       backdrop-filter: blur(10px);
       z-index: -1;
     }

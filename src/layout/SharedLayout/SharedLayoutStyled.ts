@@ -12,4 +12,9 @@ export const SharedLayoutCustom = styled.div`
 
     background-color: #121725;
   }
+
+  @media (min-width: 1280px){
+    padding-left: 165px;
+    padding-top: 88px;
+  }
 `;

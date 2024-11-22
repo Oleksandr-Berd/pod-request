@@ -13,6 +13,11 @@ export const ContentCon = styled.div`
     text-align: left;
   }
 
+  @media (min-width: 1280px){
+    width: 723px;
+
+  }
+
   & > h3 {
     margin-bottom: 16px;
 
@@ -32,6 +37,13 @@ export const ContentCon = styled.div`
 
       font-size: 48px;
       line-height: 1.67;
+    }
+
+    @media (min-width: 1280px){
+        margin-bottom: 24px;
+
+        font-size: 52px;
+        line-height: 1.19;
     }
   }
 

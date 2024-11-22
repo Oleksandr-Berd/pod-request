@@ -31,7 +31,7 @@ const RequestForm: React.FC<IProps> = ({ handleSubmit }) => {
                 }}
               />
               <ErrorMessage name="email">
-                {(msg) => (msg ? <p>{msg}</p> : null)}
+                {(msg) => (msg ? <SC.ErrorCustom>{msg}</SC.ErrorCustom> : null)}
               </ErrorMessage>
             </SC.RequestFormCustom>
             <SC.SubmitButton type="submit">Request Access</SC.SubmitButton>

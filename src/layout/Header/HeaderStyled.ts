@@ -12,4 +12,11 @@ margin-bottom: 57px;
     
     text-align: left;
 }
+
+@media (min-width: 1280px){
+    padding-left: 165px;
+    padding-top: 102px;
+
+    margin-bottom: 103px;
+}
 `

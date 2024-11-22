@@ -62,3 +62,13 @@ export const SubmitButton = styled.button`
     transform: translate(260px, 5px);
   }
 `;
+
+
+export const ErrorCustom = styled.p`
+  margin-left: 32px;
+  margin-top: 8px;
+
+  font-size: 12px;
+  font-weight: 800;
+  color: #fb3e3e;
+`;
