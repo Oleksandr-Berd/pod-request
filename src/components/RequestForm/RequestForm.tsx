@@ -20,6 +20,7 @@ const RequestForm: React.FC<IProps> = ({ handleSubmit }) => {
       >
         {({ isSubmitting, touched, errors }) => (
           <Form noValidate>
+            {isSubmitting ? "Loading..." : null}
             <SC.RequestFormCustom>
               <Field
                 type="email"
@@ -27,7 +28,7 @@ const RequestForm: React.FC<IProps> = ({ handleSubmit }) => {
                 placeholder="Email address"
                 style={{
                   borderColor:
-                    touched.email && errors.email ? "#FF5466" : "#C2D3FF",
+                    touched.email && errors.email ? "#fb3e3e" : "#C2D3FF",
                 }}
               />
               <ErrorMessage name="email">

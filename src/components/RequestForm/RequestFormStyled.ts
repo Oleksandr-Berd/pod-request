@@ -52,6 +52,16 @@ export const SubmitButton = styled.button`
 
   border-radius: 28px;
 
+  transition: background-color 1s linear;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #b3ffe2;
+    cursor: pointer;
+    transition: background-color 1s linear;
+  }
+
   @media (min-width: 768px) {
     position: absolute;
     top: 0;
